@@ -1,0 +1,19 @@
+{
+  "ExtendedData": {
+    "inputs": [
+      "http://127.0.0.1:8090/reportserver/ReportService2010.asmx"
+    ],
+    "collectionTypes": [
+      "System.Array",
+      "System.Collections.Generic.Dictionary`2"
+    ],
+    "namespaceMappings": [
+      "*, ReportService2010"
+    ],
+    "references": [
+      "D:\\03-sogo\\git\\ReportPlatform\\ReportPlatform.BAL\\bin\\Debug\\net8.0\\ReportPlatform.DAL.dll"
+    ],
+    "targetFramework": "net8.0",
+    "typeReuseMode": "All"
+  }
+}

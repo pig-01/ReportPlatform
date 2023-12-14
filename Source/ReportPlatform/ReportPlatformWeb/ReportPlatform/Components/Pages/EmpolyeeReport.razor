@@ -1,0 +1,39 @@
+﻿@page "/empolyee"
+@using ReportPlatform.BAL
+@using ReportPlatform.BAL.Factories
+@using ReportPlatform.BAL.Models
+@inject IReportFactory ReportFactory;
+
+<PageTitle>EmpolyeeReport</PageTitle>
+
+<h1>EmpolyeeReport</h1>
+
+<AuthorizeView>
+    <Authorized>
+        <div class="d-flex justify-content-center">
+            <div class="a4-element">
+                @htmlContent
+            </div>
+        </div>
+    </Authorized>
+    <NotAuthorized>
+        <p>Authentication failed!</p>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    private MarkupString htmlContent;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await RenderHtml();
+    }
+
+    // 定義一個方法來顯示原始HTML
+    protected async Task RenderHtml()
+    {
+        IReport report = ReportFactory.GetReport("EmployeesReport");
+
+        htmlContent = new MarkupString(await report.GetEmbedReportViewer());
+    }
+}
