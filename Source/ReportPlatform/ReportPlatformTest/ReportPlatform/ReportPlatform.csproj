@@ -22,9 +22,4 @@
     <PackageReference Include="System.ServiceModel.Security" Version="4.10.*" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\ReportPlatform.BAL\ReportPlatform.BAL.csproj" />
-    <ProjectReference Include="..\ReportPlatform.DAL\ReportPlatform.DAL.csproj" />
-  </ItemGroup>
-
 </Project>

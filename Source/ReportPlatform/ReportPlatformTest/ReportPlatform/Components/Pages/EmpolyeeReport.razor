@@ -1,8 +1,4 @@
 ﻿@page "/empolyee"
-@using ReportPlatform.BAL
-@using ReportPlatform.BAL.Factories
-@using ReportPlatform.BAL.Models
-@inject IReportFactory ReportFactory;
 
 <PageTitle>EmpolyeeReport</PageTitle>
 
@@ -32,8 +28,5 @@
     // 定義一個方法來顯示原始HTML
     protected async Task RenderHtml()
     {
-        IReport report = ReportFactory.GetReport("EmployeesReport");
-
-        htmlContent = new MarkupString(await report.GetEmbedReportViewer());
     }
 }
